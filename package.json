@@ -7,6 +7,7 @@
     "test": "npm run build && ava ./test/test.ts",
     "build": "tsc -b ./src/tsconfig.json",
     "clean": "rm -rf ./build",
+    "docs": "typedoc --tsconfig ./src/tsconfig.json ./src/exports.ts",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "repository": {
@@ -16,6 +17,7 @@
   "author": "Zim",
   "devDependencies": {
     "ava": "^7.0.0",
+    "typedoc": "^0.28.18",
     "typescript": "^6.0.2"
   },
   "ava": {
