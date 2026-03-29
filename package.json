@@ -1,0 +1,24 @@
+{
+  "name": "@zimtsui/typevent",
+  "exports": "./build/typevent.js",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "test": "npm run build && ava ./test/test.ts",
+    "build": "tsc -b ./src/tsconfig.json",
+    "clean": "rm -rf ./build",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zimtsui/typevent.git"
+  },
+  "author": "Zim",
+  "devDependencies": {
+    "ava": "^7.0.0",
+    "typescript": "^6.0.2"
+  },
+  "ava": {
+    "failWithoutAssertions": false
+  }
+}
