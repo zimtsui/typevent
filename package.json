@@ -1,6 +1,6 @@
 {
   "name": "@zimtsui/typevent",
-  "exports": "./build/typevent.js",
+  "exports": "./build/exports.js",
   "description": "",
   "type": "module",
   "scripts": {
