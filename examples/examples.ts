@@ -1,12 +1,3 @@
-# Typevent
-
-[![NPM Version](https://img.shields.io/npm/v/@zimtsui/typevent?style=flat-square)](https://www.npmjs.com/package/@zimtsui/typevent)
-
-Typevent is a strongly typed declaration of the EventTarget API.
-
-## Examples
-
-```ts
 import { Event, CustomEvent, EventTarget, EventListener } from '@zimtsui/typevent';
 
 type eventMap = {
@@ -23,4 +14,3 @@ eventTarget4Subscriber.addEventListener('foo', fooListener);
 const eventTarget4Publisher: EventTarget.Publish<keyof eventMap, eventMap> = eventTarget;
 const customEvent = new globalThis.CustomEvent('foo', { detail: 'hello' }) as eventMap['foo'];
 eventTarget4Publisher.dispatchEvent(customEvent);
-```

@@ -5,16 +5,13 @@ export namespace Event {
     export type Prototype = Event<string>;
 }
 
-export class CustomEvent<
+export interface CustomEvent<
     out eventTypeUnion extends string,
     payload,
-> extends globalThis.CustomEvent<payload> implements Event<eventTypeUnion> {
-    public override readonly type: eventTypeUnion;
-    public constructor(eventType: eventTypeUnion, payload: payload) {
-        super(eventType, { detail: payload });
-        this.type = eventType;
-    }
+> extends globalThis.CustomEvent<payload>, Event<eventTypeUnion> {
+    type: eventTypeUnion;
 }
+
 export namespace CustomEvent {
     export type Prototype = CustomEvent<string, unknown>;
 }

@@ -7,7 +7,6 @@
     "test": "npm run build && ava ./test/test.ts",
     "build": "tsc -b ./src/tsconfig.json",
     "clean": "rm -rf ./build",
-    "docs": "typedoc --tsconfig ./src/tsconfig.json ./src/exports.ts",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "repository": {
